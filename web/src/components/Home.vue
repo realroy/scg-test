@@ -1,5 +1,5 @@
 <template>
-  <main class="container">
+  <div class="container">
     
     <section class="jumbotron mt-5 bg-white border rounded">
       <h1 class="display-4">Roiboon Chaiyachit (Roy)</h1>
@@ -158,7 +158,8 @@
       </article>
 
     </section>
-  </main>
+    
+  </div>
 </template>
 
 
