@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <router-link class="navbar-brand" to="/">SCG Test</router-link>
     <ul class="navbar-nav">
       <li class="nav-item">
