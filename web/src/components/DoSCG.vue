@@ -1,7 +1,7 @@
 <template>
   <div class="mt-5 container">
     <section class="jumbotron mt-5 bg-white border rounded">
-      <h1 class="display-4">Finding XYZ</h1>
+      <h1 class="display-4">DOSCG</h1>
     </section>
     <section class="border rounded p-5 mb-5">
       <p v-if="isLoading">Loading ...</p>
@@ -13,12 +13,12 @@
 </template>
 
 <script>
-import service from './xyzService'
+import { fetchDataService } from '../services'
 
 export default {
   async mounted() {
     try {
-      const result = await service()
+      const result = await fetchDataService('api/DOSCG', 'DOSCG')
 
       this.message = result
     } catch (error) {
@@ -35,3 +35,5 @@ export default {
   }
 };
 </script>
+
+
