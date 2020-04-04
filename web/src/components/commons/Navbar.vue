@@ -6,10 +6,10 @@
         <router-link class="nav-link" to="/">Home</router-link>
       </li>
       <li class="nav-item">
-        <router-link class="nav-link" to="/doscg">DOSCG</router-link>
+        <router-link class="nav-link" to="/do-scg">DOSCG</router-link>
       </li>
       <li class="nav-item">
-        <router-link class="nav-link" to="/finding-x-y-and-z">Finding X, Y and Z</router-link>
+        <router-link class="nav-link" to="/xyz">Finding X, Y and Z</router-link>
       </li>
       <li class="nav-item">
         <router-link class="nav-link" to="/finding-b-and-c">Finding B and C</router-link>
