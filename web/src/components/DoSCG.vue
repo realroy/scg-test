@@ -1,6 +1,10 @@
 <template>
-  <div class="mt-5">
-    <h1>Do SCG</h1>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed recusandae vitae dolores. Sapiente vitae accusamus, eligendi nemo in nostrum dolorem harum impedit voluptatem aut non dolore officiis ullam consequatur alias!
+  <div class="mt-5 container">
+    <section class="jumbotron mt-5 bg-white border rounded">
+      <h1 class="display-4">Do SCG</h1>
+    </section>
+    <section class="border rounded p-5 mb-5">
+      
+    </section>
   </div>
 </template>
