@@ -1,12 +1,13 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import Home from "./components/Home";
-
 Vue.use(VueRouter);
 
 export default new VueRouter({
   mode: "history",
   linkExactActiveClass: 'active',
-  routes: [{ path: "/", name: "home", component: Home }],
+  routes: [
+    { path: "/", name: "home", component: () => import('./components/Home.vue') },
+    { path: "/do-scg", name: "do-scg", component: () => import('./components/DoSCG.vue') },
+  ],
 });
