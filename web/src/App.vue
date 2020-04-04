@@ -3,7 +3,7 @@
     <header>
       <Navbar />
     </header>
-    <main>
+    <main class="main">
       <router-view></router-view>
     </main>
     <Footer></Footer>
@@ -21,3 +21,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  .main {
+    height: 100vh;
+    width: 100vw;
+  }
+</style>
