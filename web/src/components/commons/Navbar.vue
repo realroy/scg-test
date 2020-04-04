@@ -6,7 +6,7 @@
         <router-link class="nav-link" to="/">Home</router-link>
       </li>
       <li class="nav-item">
-        <router-link class="nav-link" to="/do-scg">DO SCG</router-link>
+        <router-link class="nav-link" to="/DOSCG">DOSCG</router-link>
       </li>
       <li class="nav-item">
         <router-link class="nav-link" to="/xyz">Finding X, Y and Z</router-link>
