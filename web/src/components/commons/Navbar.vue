@@ -6,13 +6,13 @@
         <router-link class="nav-link" to="/">Home</router-link>
       </li>
       <li class="nav-item">
-        <router-link class="nav-link" to="/do-scg">DOSCG</router-link>
+        <router-link class="nav-link" to="/do-scg">DO SCG</router-link>
       </li>
       <li class="nav-item">
         <router-link class="nav-link" to="/xyz">Finding X, Y and Z</router-link>
       </li>
       <li class="nav-item">
-        <router-link class="nav-link" to="/finding-b-and-c">Finding B and C</router-link>
+        <router-link class="nav-link" to="/bc">Finding B and C</router-link>
       </li>
       <div class="nav-item">
         <router-link class="nav-link" to="/google-api">Google API</router-link>

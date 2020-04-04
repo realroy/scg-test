@@ -7,7 +7,11 @@ export default new VueRouter({
   mode: "history",
   linkExactActiveClass: 'active',
   routes: [
-    { path: "/", name: "home", component: () => import('./components/Home.vue') },
-    { path: "/do-scg", name: "do-scg", component: () => import('./components/DoSCG.vue') },
+    { path: "/", component: () => import('./components/Home.vue') },
+    { path: "/do-scg", component: () => import('./components/DoSCG.vue') },
+    { path: "/xyz", component: () => import('./components/XYZ.vue') },
+    { path: "/bc", component: () => import('./components/DoSCG.vue') },
+    { path: "/google-api", component: () => import('./components/DoSCG.vue') },
+    { path: "/line-message-api", component: () => import('./components/DoSCG.vue') },
   ],
 });
