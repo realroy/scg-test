@@ -1,6 +1,5 @@
 use crate::doscg::DOSCG;
 use actix_web::{get, web, HttpResponse, Responder};
-use serde_json::json;
 
 #[get("/DOSCG")]
 async fn doscg() -> impl Responder {

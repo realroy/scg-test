@@ -1,8 +1,9 @@
-use actix_web::{App, HttpResponse, HttpServer, Responder, get};
+use actix_cors::Cors;
+use actix_web::{get, App, HttpResponse, HttpServer, Responder};
 
+mod bc;
 mod doscg;
 mod xyz;
-mod bc;
 
 #[get("/")]
 async fn index() -> impl Responder {
@@ -13,12 +14,13 @@ async fn index() -> impl Responder {
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
+            .wrap(Cors::new().finish())
             .service(index)
             .configure(doscg::init_routes)
             .configure(xyz::init_routes)
             .configure(bc::init_routes)
     })
-        .bind("127.0.0.1:5000")?
-        .run()
-        .await
+    .bind("127.0.0.1:5000")?
+    .run()
+    .await
 }
