@@ -4,10 +4,11 @@
       <h1 class="display-4">Finding XYZ</h1>
     </section>
     <section class="border rounded p-5 mb-5">
-      <p v-if="isLoading">Loading ...</p>
-      <p v-else>
-        {{ message }}
-      </p>
+      <div v-if="isLoading">Loading ...</div>
+      <div v-else>
+        <strong>If</strong> X, Y, 5, 9, 15, 23, Z <br />
+        <strong>Then</strong> X = {{ x }} Y = {{ y }}  Z = {{ z }}
+      </div>
     </section>
   </div>
 </template>
@@ -18,11 +19,21 @@ import { fetchDataService } from '../services'
 export default {
   async mounted() {
     try {
-      const result = await fetchDataService('api/xzy', 'XYZ')
+      const { x, y, z } = await fetchDataService({
+        path: 'xyz',
+        key: 'XYZ',
+        method: 'POST',
+        body: {
+          values: [5, 9, 15, 3]
+        }
+      })
 
-      this.message = result
+      this.x = x
+      this.y = y
+      this.z = z
+
     } catch (error) {
-      this.message = error
+      this.error = error
     } finally {
       this.isLoading = false
     }
@@ -30,7 +41,10 @@ export default {
   data() {
     return {
       isLoading: true,
-      message: ''
+      x: 0,
+      y: 0,
+      z: 0,
+      error: null
     }
   }
 };
