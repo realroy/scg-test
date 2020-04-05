@@ -18,9 +18,9 @@ import { fetchDataService } from '../services'
 export default {
   async mounted() {
     try {
-      const result = await fetchDataService('api/DOSCG', 'DOSCG')
+      const { message } = await fetchDataService({ path: 'DOSCG', key: 'DOSCG' })
 
-      this.message = result
+      this.message = message
     } catch (error) {
       this.message = error
     } finally {
