@@ -2,6 +2,7 @@ use actix_web::{App, HttpResponse, HttpServer, Responder, get};
 
 mod doscg;
 mod xyz;
+mod bc;
 
 #[get("/")]
 async fn index() -> impl Responder {
@@ -15,6 +16,7 @@ async fn main() -> std::io::Result<()> {
             .service(index)
             .configure(doscg::init_routes)
             .configure(xyz::init_routes)
+            .configure(bc::init_routes)
     })
         .bind("127.0.0.1:5000")?
         .run()
