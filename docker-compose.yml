@@ -1,7 +1,17 @@
 version: '3.7'
 services:
+  api:
+    build: ./api
+    restart: on-failure
   web:
     build: ./web
+    depends_on:
+      - api
     ports:
       - 3000:80
-    restart: always
+    restart: on-failure
+    networks:
+      - internal-net
+networks:
+  internal-net:
+  
