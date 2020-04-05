@@ -1,4 +1,3 @@
-// src/user/mod.rs
 mod models;
 mod routes;
 
